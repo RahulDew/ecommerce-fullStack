@@ -1,0 +1,30 @@
+
+
+//Swiper for product page
+<Swiper
+    modules={[Navigation, Pagination]}
+    // spaceBetween={1}
+    slidesPerView={1}
+    // autoplay={{
+    //   delay: 2000,
+    //   disableOnInteraction: false,
+    //   stopOnLastSlide: false,
+    //   reverseDirection: false,
+    // }}
+    navigation={true}
+    // pagination={{ clickable: false }}
+    // scrollbar={{ draggable: true }}
+    // onSwiper={(swiper) => console.log(swiper)}
+    // onSlideChange={() => console.log("slide change")}
+    className=" text-white  rounded-3xl mx-10 w-full"
+>
+    {bestSellerProducts.map((product, index) => (
+    <SwiperSlide
+        key={index}
+        // style={""}
+        className="rounded-3xl flex justify-center items-center text-center select-none"
+    >
+        <img src={product.img} className="h-96 w-96 z-30" />
+    </SwiperSlide>
+    ))}
+</Swiper>
